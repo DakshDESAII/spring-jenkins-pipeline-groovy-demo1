@@ -43,6 +43,19 @@ pipeline {
             }
         
     	}
+
+        stage('Docker Build'){
+            steps{
+                script{
+                if(isUnix()){
+                sh "docker build -t daksh/spring-jenkins-ci-cd:latest ."
+				}	
+                else{
+                 bat "docker build -t daksh/spring-jenkins-ci-cd:latest ."
+                 }
+                 }
+            }
+        }
     	
     	
     	
