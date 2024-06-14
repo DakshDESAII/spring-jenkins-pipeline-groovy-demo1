@@ -48,10 +48,10 @@ pipeline {
             steps{
                 script{
                 if(isUnix()){
-                sh "docker build -t daksh/spring-jenkins-ci-cd:latest ."
+                sh "docker build -t daxdesai/spring-jenkins-ci-cd:latest ."
 				}	
                 else{
-                 bat "docker build -t daksh/spring-jenkins-ci-cd:latest ."
+                 bat "docker build -t daxdesai/spring-jenkins-ci-cd:latest ."
                  }
                  }
             }
